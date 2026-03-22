@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Potato Study Buddy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="application" aria-label="Potato Study Buddy">
+
+      <div class="header">
+        <div class="title">Potato Study Buddy 🥔</div>
+        <div class="subtitle">One thing at a time, always</div>
+      </div>
+
+      <div class="mode-tabs">
+        <button class="tab active work" data-mode="work">Focus</button>
+        <button class="tab short" data-mode="short">Short Break</button>
+        <button class="tab long" data-mode="long">Long Break</button>
+      </div>
+
+      <div class="potato-stage">
+        <div class="potato-wrap" id="potatoWrap" title="Click to toggle dance!">
+          <div class="potato" id="potato">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="smile"></div>
+            <div class="blush l"></div>
+            <div class="blush r"></div>
+          </div>
+        </div>
+        <div class="speech-bubble" id="speech">
+          Ready to crush it? Let's go! 💪
+        </div>
+      </div>
+
+      <div class="timer-wrap">
+        <svg class="ring-svg" id="ringSvg" width="160" height="160" viewBox="0 0 160 160">
+          <circle class="ring-bg" cx="80" cy="80" r="70"/>
+          <circle class="ring-progress" id="ringProgress" cx="80" cy="80" r="70"
+            stroke-dasharray="439.82"
+            stroke-dashoffset="0"/>
+        </svg>
+        <div class="timer-inner">
+          <div class="timer" id="timer">25:00</div>
+          <div class="session-label" id="sessionLabel">Focus session</div>
+        </div>
+      </div>
+
+      <div class="sessions" id="sessions" aria-label="Completed sessions">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-primary" id="mainBtn">Start</button>
+        <button class="btn btn-secondary" id="resetBtn">↺ Reset</button>
+      </div>
+
+      <div class="footer-row">
+        <label class="sound-toggle" id="soundLabel" aria-label="Toggle sound">
+          <div class="toggle-pill on" id="soundPill"></div>
+          <span>Sound</span>
+        </label>
+        <span class="tip">click potato to dance ✨</span>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
